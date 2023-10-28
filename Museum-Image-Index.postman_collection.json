@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "dcbce860-efb0-47e4-8234-5b5cd60b0607",
+		"name": "Museum Image Index",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19335589"
+	},
+	"item": [
+		{
+			"name": "01. Create Museum-index",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{{env_search_api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fields\": [\r\n    {\r\n      \"name\": \"content\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": true,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": \"ja.lucene\",\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"id\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": true,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_content_type\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_size\",\r\n      \"type\": \"Edm.Int64\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_last_modified\",\r\n      \"type\": \"Edm.DateTimeOffset\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_content_md5\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_name\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_path\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": true,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },    \r\n    {\r\n      \"name\": \"metadata_storage_file_extension\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_content_type\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_sas_token\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    }\r\n  ],\r\n  \"scoringProfiles\": [],\r\n  \"corsOptions\": {\r\n    \"allowedOrigins\": [\r\n      \"*\"\r\n    ],\r\n    \"maxAgeInSeconds\": 300\r\n  },\r\n  \"suggesters\": [],\r\n  \"analyzers\": [],\r\n  \"normalizers\": [],\r\n  \"tokenizers\": [],\r\n  \"tokenFilters\": [],\r\n  \"charFilters\": [],\r\n  \"encryptionKey\": null,\r\n  \"similarity\": {\r\n    \"@odata.type\": \"#Microsoft.Azure.Search.BM25Similarity\",\r\n    \"k1\": null,\r\n    \"b\": null\r\n  },\r\n  \"semantic\": null\r\n}"
+				},
+				"url": {
+					"raw": "https://{{search_service}}.search.windows.net/indexes/museum-index?api-version=2023-07-01-Preview",
+					"protocol": "https",
+					"host": [
+						"{{search_service}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"museum-index"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2023-07-01-Preview"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02.  Create Museum-images-index",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{{env_search_api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fields\": [\r\n    {\r\n      \"name\": \"content\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": true,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": \"ja.lucene\",\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"id\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_content_type\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_size\",\r\n      \"type\": \"Edm.Int64\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_last_modified\",\r\n      \"type\": \"Edm.DateTimeOffset\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_content_md5\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_name\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_path\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": true,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },    \r\n    {\r\n      \"name\": \"metadata_storage_path_plain\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_file_extension\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_content_type\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"metadata_storage_sas_token\",\r\n      \"type\": \"Edm.String\",\r\n      \"searchable\": false,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": null,\r\n      \"vectorSearchConfiguration\": null,\r\n      \"synonymMaps\": []\r\n    },\r\n    {\r\n      \"name\": \"embeddings\",\r\n      \"type\": \"Collection(Edm.Single)\",\r\n      \"searchable\": true,\r\n      \"filterable\": false,\r\n      \"retrievable\": true,\r\n      \"sortable\": false,\r\n      \"facetable\": false,\r\n      \"key\": false,\r\n      \"indexAnalyzer\": null,\r\n      \"searchAnalyzer\": null,\r\n      \"analyzer\": null,\r\n      \"normalizer\": null,\r\n      \"dimensions\": 1024,\r\n      \"vectorSearchConfiguration\": \"vector-config-1698466833492\",\r\n      \"synonymMaps\": []\r\n    }\r\n  ],\r\n  \"scoringProfiles\": [],\r\n  \"corsOptions\": {\r\n    \"allowedOrigins\": [\r\n      \"*\"\r\n    ],\r\n    \"maxAgeInSeconds\": 300\r\n  },\r\n  \"suggesters\": [],\r\n  \"analyzers\": [],\r\n  \"normalizers\": [],\r\n  \"tokenizers\": [],\r\n  \"tokenFilters\": [],\r\n  \"charFilters\": [],\r\n  \"encryptionKey\": null,\r\n  \"similarity\": {\r\n    \"@odata.type\": \"#Microsoft.Azure.Search.BM25Similarity\",\r\n    \"k1\": null,\r\n    \"b\": null\r\n  },\r\n  \"semantic\": null,\r\n  \"vectorSearch\": {\r\n    \"algorithmConfigurations\": [\r\n      {\r\n        \"name\": \"vector-config-1698466833492\",\r\n        \"kind\": \"hnsw\",\r\n        \"hnswParameters\": {\r\n          \"metric\": \"cosine\",\r\n          \"m\": 4,\r\n          \"efConstruction\": 400,\r\n          \"efSearch\": 500\r\n        },\r\n        \"exhaustiveKnnParameters\": null\r\n      }\r\n    ]\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://{{search_service}}.search.windows.net/indexes/museum-images-index?api-version=2023-07-01-Preview",
+					"protocol": "https",
+					"host": [
+						"{{search_service}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"museum-images-index"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2023-07-01-Preview"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "03. Create Image-Projection-skillset",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{{env_search_api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"skills\": [\r\n    {\r\n      \"@odata.type\": \"#Microsoft.Skills.Util.ShaperSkill\",\r\n      \"name\": \"ShaperForCrossProjection\",\r\n      \"description\": null,\r\n      \"context\": \"/document\",\r\n      \"inputs\": [\r\n        {\r\n          \"name\": \"metadata_storage_name\",\r\n          \"source\": \"/document/metadata_storage_name\"\r\n        },\r\n        {\r\n          \"name\": \"images\",\r\n          \"sourceContext\": \"/document/normalized_images/*\",\r\n          \"inputs\": [\r\n            {\r\n              \"name\": \"image\",\r\n              \"source\": \"/document/normalized_images/*\"\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"name\": \"imagefiles\",\r\n          \"source\": \"/document/normalized_images/*\"\r\n        }\r\n      ],\r\n      \"outputs\": [\r\n        {\r\n          \"name\": \"output\",\r\n          \"targetName\": \"crossProjection\"\r\n        }\r\n      ]\r\n    }\r\n  ],\r\n  \"cognitiveServices\": null,\r\n  \"knowledgeStore\": {\r\n    \"storageConnectionString\": \"\",\r\n    \"identity\": null,\r\n    \"projections\": [\r\n      {\r\n        \"tables\": [\r\n          {\r\n            \"tableName\": \"crossDocument\",\r\n            \"referenceKeyName\": null,\r\n            \"generatedKeyName\": \"Id\",\r\n            \"source\": \"/document/crossProjection\",\r\n            \"sourceContext\": null,\r\n            \"inputs\": []\r\n          },\r\n          {\r\n            \"tableName\": \"crossReference\",\r\n            \"referenceKeyName\": null,\r\n            \"generatedKeyName\": \"CrossId\",\r\n            \"source\": \"/document/crossProjection/imagefiles/*\",\r\n            \"sourceContext\": null,\r\n            \"inputs\": []\r\n          }\r\n        ],\r\n        \"objects\": [],\r\n        \"files\": [\r\n          {\r\n            \"storageContainer\": \"crossimages\",\r\n            \"referenceKeyName\": null,\r\n            \"generatedKeyName\": \"crossimages\",\r\n            \"source\": \"/document/crossProjection/images/*/image\",\r\n            \"sourceContext\": null,\r\n            \"inputs\": []\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"parameters\": {\r\n      \"synthesizeGeneratedKeyName\": true\r\n    }\r\n  },\r\n  \"encryptionKey\": null\r\n}"
+				},
+				"url": {
+					"raw": "https://{{search_service}}.search.windows.net/skillsets/image-projection-skillset?api-version=2023-07-01-Preview",
+					"protocol": "https",
+					"host": [
+						"{{search_service}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"skillsets",
+						"image-projection-skillset"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2023-07-01-Preview"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "04. Create Generate-Image-Embeddings-skillset",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{{env_search_api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"skills\": [\r\n    {\r\n      \"@odata.type\": \"#Microsoft.Skills.Custom.WebApiSkill\",\r\n      \"name\": \"GenerateImageEmbeddingsSkill\",\r\n      \"description\": \"Convert an image to a vector using the Vectorize Image API.\",\r\n      \"context\": \"/document/normalized_images/*\",\r\n      \"uri\": \"[AzureFunctionEndpointUrl]/api/GenerateImageEmbeddings?code=[AzureFunctionDefaultHostKey]\",\r\n      \"httpMethod\": \"POST\",\r\n      \"timeout\": \"PT1M\",\r\n      \"batchSize\": 1000,\r\n      \"degreeOfParallelism\": 1,\r\n      \"inputs\": [\r\n        {\r\n          \"name\": \"image\",\r\n          \"source\": \"/document/normalized_images/*\"\r\n        }\r\n      ],\r\n      \"outputs\": [\r\n        {\r\n          \"name\": \"embeddings\",\r\n          \"targetName\": \"embeddings\"\r\n        }\r\n      ],\r\n      \"httpHeaders\": {}\r\n    }\r\n  ],\r\n  \"cognitiveServices\": null,\r\n  \"knowledgeStore\": null,\r\n  \"encryptionKey\": null\r\n}"
+				},
+				"url": {
+					"raw": "https://{{search_service}}.search.windows.net/skillsets/generate-image-embeddings-skillset?api-version=2023-07-01-Preview",
+					"protocol": "https",
+					"host": [
+						"{{search_service}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"skillsets",
+						"generate-image-embeddings-skillset"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2023-07-01-Preview"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "05. Create Museum-index Indexer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{{env_search_api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"dataSourceName\": \"museum-datasource\",\r\n  \"skillsetName\": \"image-projection-skillset\",\r\n  \"targetIndexName\": \"museum-index\",\r\n  \"disabled\": null,\r\n  \"schedule\": null,\r\n  \"parameters\": {\r\n    \"batchSize\": null,\r\n    \"maxFailedItems\": 0,\r\n    \"maxFailedItemsPerBatch\": 0,\r\n    \"base64EncodeKeys\": null,\r\n    \"configuration\": {\r\n      \"dataToExtract\": \"contentAndMetadata\",\r\n      \"parsingMode\": \"default\",\r\n      \"imageAction\": \"generateNormalizedImages\",\r\n      \"pdfTextRotationAlgorithm\": \"detectAngles\"\r\n    }\r\n  },\r\n  \"fieldMappings\": [\r\n    {\r\n      \"sourceFieldName\": \"metadata_storage_path\",\r\n      \"targetFieldName\": \"metadata_storage_path\",\r\n      \"mappingFunction\": {\r\n        \"name\": \"base64Encode\",\r\n        \"parameters\": null\r\n      }\r\n    }\r\n  ],\r\n  \"outputFieldMappings\": [],\r\n  \"cache\": null,\r\n  \"encryptionKey\": null\r\n}"
+				},
+				"url": {
+					"raw": "https://{{search_service}}.search.windows.net/indexers/museum-indexer?api-version=2023-07-01-Preview",
+					"protocol": "https",
+					"host": [
+						"{{search_service}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexers",
+						"museum-indexer"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2023-07-01-Preview"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "06. Create Museum-Images-index Indexer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{{env_search_api_key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"dataSourceName\": \"crossimages-datasource\",\r\n  \"skillsetName\": \"generate-image-embeddings-skillset\",\r\n  \"targetIndexName\": \"museum-images-index\",\r\n  \"disabled\": null,\r\n  \"schedule\": null,\r\n  \"parameters\": {\r\n    \"batchSize\": null,\r\n    \"maxFailedItems\": 0,\r\n    \"maxFailedItemsPerBatch\": 0,\r\n    \"base64EncodeKeys\": null,\r\n    \"configuration\": {\r\n      \"dataToExtract\": \"contentAndMetadata\",\r\n      \"parsingMode\": \"default\",\r\n      \"imageAction\": \"generateNormalizedImages\"\r\n    }\r\n  },\r\n  \"fieldMappings\": [\r\n    {\r\n      \"sourceFieldName\": \"metadata_storage_path\",\r\n      \"targetFieldName\": \"metadata_storage_path\",\r\n      \"mappingFunction\": {\r\n        \"name\": \"base64Encode\",\r\n        \"parameters\": null\r\n      }\r\n    },\r\n    {\r\n      \"sourceFieldName\": \"metadata_storage_path\",\r\n      \"targetFieldName\": \"metadata_storage_path_plain\",\r\n      \"mappingFunction\": null\r\n    }\r\n  ],\r\n  \"outputFieldMappings\": [\r\n    {\r\n      \"sourceFieldName\": \"/document/normalized_images/0/embeddings\",\r\n      \"targetFieldName\": \"embeddings\"\r\n    }\r\n  ],\r\n  \"cache\": null,\r\n  \"encryptionKey\": null\r\n}"
+				},
+				"url": {
+					"raw": "https://{{search_service}}.search.windows.net/indexers/museum-images-indexer?api-version=2023-07-01-Preview",
+					"protocol": "https",
+					"host": [
+						"{{search_service}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexers",
+						"museum-images-indexer"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2023-07-01-Preview"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
